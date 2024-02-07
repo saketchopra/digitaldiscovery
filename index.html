@@ -1,40 +1,31 @@
 <html lang="en">
-    <head>
-        <link rel="icon" href="Images/Icon.ico">
-        <title>Digital Discoveries{DD}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="CSS/Main.css">
-        <meta charset="UTF-8">
-    </head>
-    <body background="Images/White_background.jpeg">
-        <nav class="navigation-bar">
-            <a href="index.html" class="active">
-                Home page
-            </a>
-            <a href="#creations">
-                Creations
-            </a>
-            <a href="#about">
-                About
-            </a>
-            <a href="English_dark.html" class="dark11">
-                <button class="darkbutton">
-                    Toggle dark mode
-                </button>
-            </a>
-        </nav>
-        <a href="https://technologymagazine.com" target="_blank">
-            <marquee bgcolor="yellow" onmouseover="this.stop()" onmouseout="this.start()">
-                Click me to go to a magazine full about technology.
-            </marquee>
+
+<head>
+    <link rel="icon" href="Images/Icon.ico">
+    <title>Digital Discoveries{DD}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="CSS/Main.css">
+    <script src="JS/mainJs.js"></script>
+    <meta charset="UTF-8">
+</head>
+
+<body id="mainBody">
+    <nav class="navigation-bar">
+        <a href="index.html" class="active floatLef">
+            Home page
+        </a>
+        <a href="#creations" class="floatLef">
+            Creations
+        </a>
+        <a href="#about" class="floatLef">
+            About
         </a>
         <div class="dropdown">
-            <button class="btn box-outline">
-                <span>
-                    English
-                </span>
+            <button class="dropbtn">Language 
+                <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
+                <a href="index.html">English</a>
                 <a href="Arabic/ar.html">
                     العربية
                 </a>
@@ -49,26 +40,34 @@
                 </a>
             </div>
         </div>
-        <br>
-        <br>
-        <br>
+        <button class="darkbutton" id="dkBtn" onclick="changeColor()">
+            <div id="darkText">Click dark mode</div>
+            <div id="whiteText">Click light mode</div>
+        </button>
+    </nav>
+    <div class="row movingText">
+        <a href="https://technologymagazine.com" target="_blank">
+            <marquee class="marqText" onmouseover="this.stop()" onmouseout="this.start()">
+                Click me to go to a magazine full about technology.
+            </marquee>
+        </a>
+    </div>
+    <div class="banner">
         <marquee scrollamount="20">
             <h1 class="rainbow">
                 Welcome to Digital Discoveries!
             </h1>
         </marquee>
-        <h3 style="text-align: center;">
-            Digital Discoveries is a small website made for the Digital Fest competition. This website is made by Saket Chopra, and Fardan Puthukkudy.
-        </h3>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div id="creations">
-            <h1 class="creations">
-                Our creations:
-            </h1>
+        <h2>
+            Digital Discoveries is a small website made for the Digital Fest competition
+        </h2>
+        <p>This website is made by Saket Chopra, and Fardan Puthukkudy</p>
+    </div>
+    <div class="row " id="creations">
+        <div class="row creationHead">
+            Our Creations
+        </div>
+        <div class="bannerCreations">
             <a href="Tic-Tac-Toe_game.html">
                 <button class="MINECRAFT">
                     Play Tic-Tac-Toe
@@ -80,57 +79,39 @@
                     Play a memory game
                 </button>
             </a>
-            &nbsp; &nbsp;
-            <br>
-            <p>
-                Few music artists 🤩
-            </p>
-            <div class="smallestviolin">
-                <a href="https://www.youtube.com/@ImagineDragons/releases" target="_blank">
-                    <img src="Images/Imagine_Dragons_logo.png" alt="Imagine Dragons logo." style="height:220px;">
-                </a>
-                <a href="https://www.youtube.com/@ajr/releases" target="_blank">
-                    <img src="Images/AJR_logo.png" alt="AJR logo.">
-                </a>
-                <a href="https://www.youtube.com/@JVKE/releases" target="_blank">
-                    <img src="Images/JVKE_logo.png" alt="JVKE/JAKE logo." style="height:195px;">
-                </a>
-            </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div id="about">
-            <h2 class="about" style="outline: groove;">
-                Website creators:
-            </h2>
-            <u style="color: orange;">
-                <i>
-                    <h4 style="color: orange; font-size:x-large; font-family: cursive;">
-                        Saket Chopra
-                    </h4>
-                </i>
-            </u>
-            <p>
-                The main coder of this website <img src="Images/Blob_help.png" alt="Help." style="height:35px;">
-            </p>
-            <p>
-                I've made all the styles, all the HTML tags, and even more! Hoped you enjoyed this site thus far!
-            </p>
-            <br>
-            <u>
-                <i>
-                    <h4 style="font-family:cursive; font-size: x-large; color:rgb(36, 113, 8)">Fardan Puthukkudy</h4>
-                </i>
-            </u>
-            <p>I'm the assistant coder of this website. I am basically the "Game maker" and "Helper" of this website.</p>
+    </div>
+    <div class="row musicHead" id="musicHeadColor">
+        <div class="row creationHead">
+            Few music artists 🤩
         </div>
-    </body>
+        <div class="bannerMusic">
+            <a href="https://www.youtube.com/@ImagineDragons/releases" target="_blank">
+                <img src="Images/Imagine_Dragons_logo.png" alt="Imagine Dragons logo.">
+            </a>
+            <a href="https://www.youtube.com/@ajr/releases" target="_blank">
+                <img src="Images/AJR_logo.png" alt="AJR logo.">
+            </a>
+            <a href="https://www.youtube.com/@JVKE/releases" target="_blank">
+                <img src="Images/JVKE_logo.png" alt="JVKE/JAKE logo.">
+            </a>
+        </div>
+    </div>
+    <div class="footer" id="about">
+        <div class="coder">
+            Website creators
+        </div>
+        <div class="footername">
+            <span class="col">
+                <p>Saket Chopra</p> 
+                The main coder of this website <img src="Images/Blob_help.png" alt="Help." style="height:35px;"> I've made all the styles, all the HTML tags, and even more! Hoped you enjoyed this site thus far!
+            </span>
+            <span class="col">
+                <p>Fardan Puthukkudy</p> 
+                I'm the assistant coder of this website. I am basically the "Game maker" and "Helper" of this website.
+            </span>
+        </div>
+    </div>
+</body>
+
 </html>

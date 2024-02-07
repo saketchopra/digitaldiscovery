@@ -1,23 +1,43 @@
 .navigation-bar {
     background: #C6A600;
     overflow: hidden;
+    width: 100%;
 }
 
-.navigation-bar a {
-    float: left;
+.navigation-bar .floatLef {
     text-align: center;
-    padding: 14px 16px;
+    padding: 15px;
     font-size: 15px;
     color: white;
     text-decoration: none;
+}
+
+.floatLef {
+    float: left;
 }
 
 .navigation-bar a.active {
     background-color: #04AA6D;
 }
 
-.navigation-bar a:hover {
+.navigation-bar .floatLef:hover {
     background-color: rgba(0, 255, 255, 0.374);
+}
+
+.darkbutton {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    padding: 14px 16px;
+    background-color: #000;
+    font-family: inherit;
+    cursor: pointer;
+    float: right;
+}
+
+#whiteText {
+    display: none;
 }
 
 html {
@@ -25,42 +45,149 @@ html {
     scroll-behavior: smooth;
 }
 
-.darkbutton {
-    background-color: #1a3a2e;
-    color: white;
-    padding: 12px 15px;
-    text-align: center;
-    float: right;
-    font-size: 15px;
-    cursor: pointer;
+.movingText {
+    background-color: yellow;
+    padding: 2px;
 }
 
 .dropdown {
-    position: relative;
-    display: inline-block;
-  }
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: red;
+}
 
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
 .dropdown-content a {
+    float: none;
     color: black;
-    padding: 12px 15px;
-    display: block;
+    padding: 12px 16px;
     text-decoration: none;
+    display: block;
+    text-align: left;
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: #ddd;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.banner {
+    position: relative;
+    /* background-color: #fff; */
+    width: 100%;
+    overflow: hidden;
+    height: 550px;
+    background-image: url("../Images/banner.gif");
+    justify-content: center;
+    text-align: center;
+}
+
+.banner marquee {
+    width: 70%;
+}
+
+.banner h1 {
+    text-align: center;
+    padding-top: 200px;
+    color: #fff;
+}
+
+.banner p,
+h2 {
+    text-align: center;
+    color: #fff;
+}
+
+.creationHead {
+    text-align: center;
+    color: blueviolet;
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    padding-top: 5rem;
+}
+
+.bannerCreations {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 3rem;
+}
+
+.col-sm-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.musicHead {
+    background-color: #f8f8f8;
+}
+
+.footer {
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.coder {
+    padding-top: 3rem;
+    text-align: center;
+    color: blueviolet;
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.footername {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.footername .col {
+    margin: 2rem auto !important;
+}
+
+.footername .col p {
+    font-weight: 500;
+    line-height: 1.2;
 }
 
 .btn {
@@ -76,15 +203,13 @@ html {
     transition: all 0.3s ease;
     position: relative;
     display: inline-block;
-    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-    7px 7px 20px 0px rgba(0,0,0,.1),
-    4px 4px 5px 0px rgba(0,0,0,.1);
-    outline: none;  
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
 }
 
 .box-outline {
-    background: rgb(0,172,238);
-    background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+    background: rgb(0, 172, 238);
+    background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
     width: 130px;
     height: 40px;
     line-height: 42px;
@@ -99,13 +224,13 @@ html {
     height: 100%;
 }
 
-.box-outline:before, 
+.box-outline:before,
 .box-outline:after {
     position: absolute;
     content: "";
     right: 0;
     top: 0;
-    background: rgba(2,126,251,1);
+    background: rgba(2, 126, 251, 1);
     transition: all 0.3s ease;
 }
 
@@ -119,7 +244,7 @@ html {
     height: 2px;
 }
 
-.box-outline:hover{
+.box-outline:hover {
     background: transparent;
     box-shadow: none;
 }
@@ -132,8 +257,8 @@ html {
     width: 100%;
 }
 
-.box-outline span:hover{
-    color: rgba(2,126,251,1);
+.box-outline span:hover {
+    color: rgba(2, 126, 251, 1);
 }
 
 .box-outline span:before,
@@ -142,7 +267,7 @@ html {
     content: "";
     left: 0;
     bottom: 0;
-    background: rgba(2,126,251,1);
+    background: rgba(2, 126, 251, 1);
     transition: all 0.3s ease;
 }
 
@@ -166,7 +291,7 @@ html {
 
 .rainbow {
     font-size: 30px;
-    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet, red);
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
     -webkit-text-fill-color: transparent;
     animation: rainbow-animation 35s linear infinite;
     -webkit-background-clip: text;
@@ -176,6 +301,29 @@ html {
     to {
         background-position: 4500vh;
     }
+}
+
+.bannerCreations {
+    height: 60px;
+}
+
+.bannerMusic {
+    height: 190px;
+    text-align: center;
+}
+
+.bannerMusic img {
+    width: 121px;
+    padding: 30px;
+    transition: transform .2s;
+}
+
+.bannerMusic img:hover {
+    transform: scale(1.2);
+}
+
+.bannerMusic a {
+    text-decoration: none;
 }
 
 .creations {
@@ -189,7 +337,7 @@ html {
     box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset, rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px, rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px, rgba(44, 187, 99, 0.15) 0 16px 32px;
     color: green;
     display: inline-block;
-    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
     padding: 7px 20px;
     text-align: center;
     text-decoration: none;
@@ -200,6 +348,7 @@ html {
     -webkit-user-select: none;
     touch-action: manipulation;
     cursor: pointer;
+    height: 50px;
 }
 
 .MINECRAFT:hover {
@@ -251,5 +400,6 @@ html {
 }
 
 body {
+    margin: 0px;
     background-size: 100%;
 }
